@@ -260,6 +260,17 @@ body {
     opacity: 0.9;
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Contact Section */
 .contact {
     padding: 6rem 5%;
@@ -345,14 +356,44 @@ body {
     padding: 2rem 5%;
 }
 
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .nav {
+        padding: 1rem 3%;
+    }
+    
+    .services, .zone-intervention, .testimonials, .contact {
+        padding: 4rem 3%;
+    }
+    
+    /* Form Contact - Mobile */
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .form-group input, .form-group textarea {
+        padding: 0.8rem;
     }
 }
